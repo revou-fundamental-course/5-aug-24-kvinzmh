@@ -1,6 +1,10 @@
 /*ini css*/
 
 
+body{
+font-family: geneva, Arial;;
+}
+
 .main-title{
     text-align: center;
 }
@@ -48,3 +52,4 @@ input[type=number]{
     font-size: 14px;
 
 }
+
