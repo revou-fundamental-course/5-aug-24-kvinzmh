@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,65 +10,84 @@
 <body>
     <!-- judul -->
     <header>
-
         <h1 class="main-title"> Kalkulator BMI</h1>
-
     </header>
 
-
-
     <main>
-<!-- kiri -->
-<!-- aside1 -->
+        <!-- kiri -->
+        <!-- aside1 -->
         <aside>
             <article>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
-                    PageMaker including versions of Lorem Ipsum.</p>
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang
+                    penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI </p>
             </article>
-<!-- form -->
+            <!-- form -->
             <form>
                 <div>
                     <h3>Jenis Kelamin</h3>
-    
                     <input type="radio" id="jenis-kelamin" name="jenis-kelamin" value="Laki-Laki"><label for="Laki-Laki">Laki-Laki</label><br>
-                    <input type="radio" id="jenis-kelamin"name="jenis-kelamin" value="Perempuan"><label for="Perempuan">Perempuan</label><br>
+                    <input type="radio" id="jenis-kelamin" name="jenis-kelamin" value="Perempuan"><label for="Perempuan">Perempuan</label><br>
                 </div>
-<!-- perhitungan -->
-                    <div>
-<!-- Berat Badan -->
-                        <h3>Berat Badan (kg)</h3>
-                        <input type="number">
-<!-- usia -->
-                        <h3>Usia (tahun)</h3>
-                        <input type="number">
-<!-- Tinggi Badan -->
-                        <h3>Tinggi Badan (cm)</h3>
-                        <input type="number">
-                    </div>
-    
-                    <div class="form btn-container">
-                        <button class="button bg-cornslik">Hitung BMI</button>
-                        <button class="button bg-reset">Reset</button>
-    
-                    </div>
+                <!-- perhitungan -->
+                <div>
+                    <!-- Berat Badan -->
+                    <h3>Berat Badan (kg)</h3>
+                    <input type="number" id="weight">
+                    <!-- usia -->
+                    <h3>Usia (tahun)</h3>
+                    <input type="number" id="age">
+                    <!-- Tinggi Badan -->
+                    <h3>Tinggi Badan (cm)</h3>
+                    <input type="number" id="height">
+                </div>
+                <div class="form btn-container">
+                    <button class="button bg-cornslik" type="button" onclick="calculateBMI()">Hitung BMI</button>
+                    <button class="button bg-reset" type="reset">Reset</button>
+                </div>
             </form>
-<!-- artikel2 -->
+            <!-- Keunggulan fitur -->
+            <h2> Keunggulan Fitur</h2>
+            <ol>
+                <li> Menghitung berat badan </li>
+                <li> Menentukan kategori berat badan</li>
+                <li> Mempersiapkan program penurunan berat badan</li>
+            </ol>
+            <!-- artikel2 -->
             <article>
                 <header>
                     <h2>Form Information</h2>
-    
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by 
-                        accident, sometimes on purpose (injected humour and the like).</p>
+                    <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (Wanita hamil atau menyusui tidak boleh mengandalkan Pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p><br>
+                    <p>Kalkulator Akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam Kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam Meter) atau BMI = Kg/M².</p>
                 </header>
             </article>
-<!-- aside 2 -->
         </aside>
-<!-- kanan -->
+        <!-- kanan -->
         <aside>
+            <form>
+                <h2>Hasil</h2>
+                <div class="result-section">
+                    <p id="bmi-result"></p>
+                    <p id="bmi-status"></p>
+                </div>
+            </form>
+           
             <section>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
-                PageMaker including versions of Lorem Ipsum.
-            </section>
+                <h2>Hasil BMI diantara 23 dan 25</h2>
+                Anda berada dalam kategori berat badan ideal atau berat badan lebih.
+                Hindari terlalu banyak mengonsumsi makanan yang tinggi kalori dan kurangi aktivitas fisik untuk menjaga agar BMI Anda tetap dalam kisaran normal.</p>
+                Jika BMI Anda berada diatas batas normal terdapat kemungkinan meningkatkan risiko penyakit seperti:
+              <center> <form>
+               <center> <ul>
+                    <li>Hipertensi</li>
+                    <li>Sakit Jantung</li>
+                    <li>Diabetes</li>
+                    <li>Osteoarthritis</li>
+                </ul>
+                </form></center>
+                <!-- button solusi -->
+                <button onclick="consultNutritionist()">Konsultasi Ahli Gizi Via Aplikasi</button>
+                <button onclick="registerOnline()">Registrasi Online</button>
+             </section>
         </aside>
         
 
@@ -79,5 +97,12 @@
     <footer>
        <center><p>Made By Kvinzmh</p></center>
     </footer>
+    <script src="js\script.js"></script>
 </body>
 </html>
+
+
+
+
+
+

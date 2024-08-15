@@ -2,7 +2,8 @@
 
 
 body{
-font-family: geneva, Arial;;
+font-family: geneva, Arial;
+padding: 20px;
 }
 
 .main-title{
@@ -11,6 +12,7 @@ font-family: geneva, Arial;;
 
 main{
 display: flex;
+text-align: left;
 }
 
 
@@ -20,7 +22,8 @@ form{
 }
 
 aside{
-padding: 48px;
+padding-left: 48px;
+
 }
 .form-btn-container{
 margin-top: 24px;
@@ -28,17 +31,17 @@ margin-bottom: 16px;
 }
 .button{
     height: 32px;
-    background-color: cornsilk;
+    background-color: rgb(21, 135, 202);
     border: none;
     border-radius: 4px;
 }
 
 .bg-cornslik{
-    background-color: cornsilk;
+    background-color: rgb(7, 151, 183);
 }
 .bg-reset{
     background-color: red;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 input[type=number]{
     width: 100%;
@@ -52,4 +55,15 @@ input[type=number]{
     font-size: 14px;
 
 }
+.input-section, .result-section {
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
 
